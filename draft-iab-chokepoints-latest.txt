@@ -99,7 +99,7 @@ Table of Contents
    This design goal extends to the entities that operate the Internet.
    For example, not only are there multiple DNS root servers, but we
    also assure that they are operated by a number of parties, many of
-   which compete against each other.
+   whom compete against each other.
 
    However, there are some cases when there is an unavoidable choke
    point.  For example, as a central source of truth regarding naming,
@@ -117,7 +117,8 @@ Internet-Draft            Internet Choke Points            December 2017
    When an Internet choke point can't be avoided, we assure that it is
    administered by multiple parties with balanced interests, often
    referred to as the Multi-Stakeholder Model [4].  In the case of the
-   Domain Name System, oversight is performed by ICANN.
+   Domain Name System, oversight is performed by ICANN, a multi-
+   stakeholder organisation.
 
    Similarly, the specifications that describe the Internet and the Web
    form another potential choke point, since they mediate how most
@@ -142,9 +143,8 @@ Internet-Draft            Internet Choke Points            December 2017
    mitigating Distributed Denial-of-Service (DDoS) attacks.  While there
    appears to be a healthy market of CDNs (and similar services) and the
    costs of using one have been driven down considerably over the years,
-   current reliance on them suggests that there is a risk of a choke
-   point forming - as there is wherever a function is critical to the
-   Internet's operation.
+   some suggest that there is a risk of a choke point forming - as there
+   is wherever a function is critical to the Internet's operation.
 
    When such a choke point forms, one possible way to counter its ill
    effects is regulation, either externally or within the Internet
@@ -179,17 +179,6 @@ Internet-Draft            Internet Choke Points            December 2017
    more diversity at the potential choke point, technical measures that
    counteract its formation, or other means.
 
-   Going back to the example of CDNs and DDoS mitigation, the IETF is
-   working to create protocols to help networks to communicate about
-   DDoS attacks in the DOTS Working Group, and there is emerging work to
-   help networks prevent their clients from contributing to DDoS
-   attacks.
-
-   Outside the IETF, organisations like FIRST assure that responses are
-   coordinated.  These approaches aim to find a cooperative and
-   voluntary solution to the problem without necessitating a new choke
-   point.
-
 4.  Avoid Choke Points
 
    As John Gilmore said, "the internet interprets censorship as damage
@@ -218,14 +207,6 @@ Internet-Draft            Internet Choke Points            December 2017
 
    [3] http://root-servers.org/
 
-
-
-
-Nottingham & Trammell     Expires June 11, 2018                 [Page 4]
-
-Internet-Draft            Internet Choke Points            December 2017
-
-
    [4] https://en.wikipedia.org/wiki/Multistakeholder_governance_model
 
    [5] https://open-stand.org/infographic-the-benefits-of-open-
@@ -235,6 +216,15 @@ Internet-Draft            Internet Choke Points            December 2017
 
    [7] http://www.ohchr.org/Documents/Publications/
        GuidingPrinciplesBusinessHR_EN.pdf
+
+
+
+
+
+Nottingham & Trammell     Expires June 11, 2018                 [Page 4]
+
+Internet-Draft            Internet Choke Points            December 2017
+
 
 Authors' Addresses
 
@@ -247,6 +237,16 @@ Authors' Addresses
    Brian Trammell
 
    Email: ietf@trammell.ch
+
+
+
+
+
+
+
+
+
+
 
 
 
