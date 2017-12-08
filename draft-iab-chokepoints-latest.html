@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head profile="http://www.w3.org/2006/03/hcard http://dublincore.org/documents/2008/08/04/dc-html/">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+
+  <title>Internet Choke Points</title>
+
+  
+<style type="text/css">/*<![CDATA[*/
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
+
+@media screen and (min-width: 1024px) {
+  ul.toc, #rfc\.toc {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    right: calc(50vw - 525px);
+    width: 300px;
+    z-index: 1;
+  }
+  #rfc\.toc {
+    top: 15px;
+  }
+  ul.toc {
+    top: 80px;
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+
+  body {
+    padding-right: 350px;
+  }
+}
+
+body {
+  font: 15px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333;
+  font-size-adjust: 0.5;
+  line-height: 130%;
+  margin: 25px auto;
+  max-width: 724px;
+}
+
+.title, .filename, h1, h2, h3, h4 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size-adjust: 0.5;
+  font-weight: 500;
+  color: #333;
+  line-height: 100%;
+  margin: 0.8em 0 0.3em;
+}
+.title { font-size: 36px; }
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3, h4 { font-size: 18px; }
+h1 a[href], h2 a[href], h3 a[href], h4 a[href] {
+  color: #333;
+}
+
+ul.toc li {
+  list-style: none;
+  text-indent: -2.5em;
+  padding-left: 2.5em;
+  padding-bottom: 5px;
+  margin: 0;
+}
+ul.toc ul {
+  margin: 0;
+}
+/* xml2rfc nests ul directly inside ul which messes with the style badly */
+ul.toc, ul.toc>ul, ul.toc ul>ul {
+  margin: 0 0 0 1.5em;
+}
+
+table {
+  margin-left: 0em;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+td {
+  border-top: 1px solid #ddd;
+  vertical-align: top;
+}
+tr:nth-child(2n+1) > td,
+tr:nth-child(2n+1) > th {
+  background-color: #f9f9f9;
+}
+td.reference {
+  max-width: 200px;
+  border-top: none;
+  padding-right: 1em;
+}
+.right {
+  text-align: right;
+}
+
+
+table.header {
+  width: 100%;
+}
+table.header td {
+  border: none;
+  background-color: transparent;
+  color: black;
+}
+.filename {
+  color: rgb(119, 119, 119);
+  font-size: 23px;
+  font-weight: normal;
+  height: auto;
+  line-height: 100%;
+}
+#rfc\.abstract+p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 130%;
+}
+
+samp, tt, code, pre {
+  font: 11pt consolas, monospace;
+  font-size-adjust: none;
+}
+pre {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+  padding: 5px;
+  margin: 5px;
+}
+.figure {
+  font-style: italic;
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 10px 0 0;
+}
+.vcard {
+  font-style: normal;
+}
+.vcardline {
+  display: block;
+}
+.vcardline .fn {
+  font-weight: bold;
+}
+.vcardline .hidden {
+  display: none;
+}
+
+dl {
+  margin-left: 1em;
+}
+dl.dl-horizontal: {
+  margin-left: 0;
+}
+dl > dt {
+  float: left;
+  margin-right: 1em;
+}
+dl.nohang > dt {
+  float: none;
+}
+dl > dd {
+  margin-bottom: .5em;
+}
+dl.compact > dd {
+  margin-bottom: 0em;
+}
+dl > dd > dl {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+ul.empty {
+  list-style-type: none;
+}
+ul.empty li {
+  margin-top: .5em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+a {
+  text-decoration: none;
+}
+a[href] {
+  color: #2a6496;
+}
+a[href]:hover {
+  background-color: #eee;
+}
+
+ol, ul, li, p {
+  padding: 0;
+  margin: 0.5em 0 0.5em 2em;
+}
+li, p {
+  margin-left: 0;
+}
+address {
+  font-style: normal;
+}
+
+.github-fork-ribbon-wrapper {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  /* "Fork me on GitHub" CSS ribbon based on
+   * https://github.com/simonwhitaker/github-fork-ribbon-css
+   */
+  .github-fork-ribbon {
+    position: absolute;
+    padding: 2px 0;
+    background-color: #a00;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+    font: 700 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    pointer-events: auto;
+
+    top: 38px;
+    right: -45px;
+
+    transform: rotate(45deg);
+  }
+
+  .github-fork-ribbon a[href],
+  .github-fork-ribbon a[href]:hover {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+    width: 190px;
+    line-height: 18px;
+
+    display: inline-block;
+    padding: 2px 0;
+
+    border: 1.5px dotted #fff;
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .github-fork-ribbon-wrapper {
+    display: block;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    overflow: hidden;
+    top: 0; right: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .github-fork-ribbon-wrapper {
+    position: fixed;
+  }
+/*]]>*/</style>
+
+
+  <link href="#rfc.toc" rel="Contents">
+<link href="#rfc.section.1" rel="Chapter" title="1 Choke Points on the Internet">
+<link href="#rfc.section.2" rel="Chapter" title="2 Emerging Choke Points">
+<link href="#rfc.section.3" rel="Chapter" title="3 Avoid Choke Points">
+<link href="#rfc.authors" rel="Chapter">
+
+
+  <meta name="generator" content="xml2rfc version 2.8.2 - https://tools.ietf.org/tools/xml2rfc" />
+  <link rel="schema.dct" href="http://purl.org/dc/terms/" />
+
+  <meta name="dct.creator" content="Nottingham, M. and B. Trammell" />
+  <meta name="dct.identifier" content="urn:ietf:id:draft-iab-chokepoints-latest" />
+  <meta name="dct.issued" scheme="ISO8601" content="2017-12-8" />
+  <meta name="dct.abstract" content="Recent events have caused concern about control of access to the Internet, leading one infrastructure company&#8217;s CEO to reportedly assert:" />
+  <meta name="description" content="Recent events have caused concern about control of access to the Internet, leading one infrastructure company&#8217;s CEO to reportedly assert:" />
+
+</head>
+
+<body>
+
+  <table class="header">
+    <tbody>
+    
+    	<tr>
+<td class="left">IAB</td>
+<td class="right">M. Nottingham</td>
+</tr>
+<tr>
+<td class="left">Internet-Draft</td>
+<td class="right"></td>
+</tr>
+<tr>
+<td class="left">Intended status: Informational</td>
+<td class="right">B. Trammell</td>
+</tr>
+<tr>
+<td class="left">Expires: June 11, 2018</td>
+<td class="right">December 8, 2017</td>
+</tr>
+
+    	
+    </tbody>
+  </table>
+
+  <p class="title">Internet Choke Points<br />
+  <span class="filename">draft-iab-chokepoints-latest</span></p>
+  
+  <h1 id="rfc.abstract"><a href="#rfc.abstract">Abstract</a></h1>
+<p>Recent events have caused concern about control of access to the Internet, leading one infrastructure company&#8217;s CEO to reportedly assert:</p>
+<p></p>
+
+<ul class="empty"><li>Literally, I woke up in a bad mood and decided someone shouldn&#8217;t be allowed on the Internet. No one should have that power.</li></ul>
+<p>In fact, the Internet is both architected and administered to preclude any one entity from having this power, through the careful management of &#8220;choke points&#8221; where such power could be exercised.</p>
+<h1 id="rfc.status"><a href="#rfc.status">Status of This Memo</a></h1>
+<p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
+<p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
+<p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
+<p>This Internet-Draft will expire on June 11, 2018.</p>
+<h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
+<p>Copyright (c) 2017 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
+<p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
+
+  
+  <hr class="noprint" />
+  <h1 class="np" id="rfc.toc"><a href="#rfc.toc">Table of Contents</a></h1>
+  <ul class="toc">
+
+  	<li>1.   <a href="#rfc.section.1">Choke Points on the Internet</a>
+</li>
+<li>2.   <a href="#rfc.section.2">Emerging Choke Points</a>
+</li>
+<li>3.   <a href="#rfc.section.3">Avoid Choke Points</a>
+</li>
+<li><a href="#rfc.authors">Authors' Addresses</a>
+</li>
+
+
+  </ul>
+
+  <h1 id="rfc.section.1">
+<a href="#rfc.section.1">1.</a> <a href="#choke-points-on-the-internet" id="choke-points-on-the-internet">Choke Points on the Internet</a>
+</h1>
+<p id="rfc.section.1.p.1">A large influence on the architecture of the Internet was a need to survive nuclear attack, so that loss of no one link or node would preclude communication. This extends not only to the physical links that make up the Internet (seen, for example, in the duplication of submarine internet links), but also to the various services that Internet access depends upon; for example, the operation of multiple DNS root servers.</p>
+<p id="rfc.section.1.p.2">Avoiding choke points is both a design goal for both the protocols and the services that make network access and operations possible, as well as an assumption made by each layer and service about its dependencies. The resilience of the Internet depends on this assumption.</p>
+<p id="rfc.section.1.p.3">This design goal extends to the entities that operate the Internet. For example, not only are there multiple DNS root servers, but we also assure that they are operated by a number of parties, many of which compete against each other.</p>
+<p id="rfc.section.1.p.4">However, there are some cases when there is an unavoidable choke point. For example, as a central source of truth regarding naming, administration of the name space within the Domain Name System is a necessary choke point.</p>
+<p id="rfc.section.1.p.5">When an Internet choke point can&#8217;t be avoided, we assure that it is administered by multiple parties with balanced interests, often referred to as the Multi-Stakeholder Model. In the case of the Domain Name System, oversight is performed by ICANN.</p>
+<p id="rfc.section.1.p.6">Similarly, the specifications that describe the Internet and the Web form another potential choke point, since they mediate how most people use the Internet. For these, standardization is overseen by the World Wide Web consortium and the IETF, both of whom subscribe to open standards principles.</p>
+<p id="rfc.section.1.p.7">Together, these architectural principles and corresponding practices assure that no one person, business or government can control the entire Internet.</p>
+<h1 id="rfc.section.2">
+<a href="#rfc.section.2">2.</a> <a href="#emerging-choke-points" id="emerging-choke-points">Emerging Choke Points</a>
+</h1>
+<p id="rfc.section.2.p.1">In some cases, external factors encourage the formation of a new choke point despite the efforts outlined above. For example, near-monopolies on &#8220;last-mile&#8221; Internet access in some jurisdictions have led to concerns about network neutrality, since they act as a choke point.</p>
+<p id="rfc.section.2.p.2">Content Delivery Networks (CDNs) are sometimes viewed as another emerging choke point, because they are seen as essential in mitigating Distributed Denial-of-Service (DDoS) attacks. While there appears to be a healthy market of CDNs (and similar services) and the costs of using one have been driven down considerably over the years, current reliance on them suggests that there is a risk of a choke point forming &#8211; as there is wherever a function is critical to the Internet&#8217;s operation.</p>
+<p id="rfc.section.2.p.3">When such a choke point forms, one possible way to counter its ill effects is regulation, either externally or within the Internet ecosystem (e.g., as ICANN does).  While it may be appropriate as a solution &#8211; especially when a monopoly forms &#8211; the effect of regulation on the architecture need to be evaluated carefully.</p>
+<p id="rfc.section.2.p.4">Historically, the Internet has worked best as a network-of-networks, where each has administrative control to make decisions about who is allowed to connect locally. Imposing external constraints on how networks select their members and who they communicate with could have far-reaching effects, especially since they are often already subject to a variety of local laws and regulations.</p>
+<p id="rfc.section.2.p.5">Ensuring that choke points don&#8217;t form is preferable to enshrining them, since they introduce not only points of control, but also increase the risk of failure in that component, concentrate the risk of security vulnerabilities there, and can ultimately limit the scale of the Internet.</p>
+<p id="rfc.section.2.p.6">Therefore, when there is risk of a choke point forming, we look for other mitigations before considering constraints on the behaviour of infrastructure providers. This might take place through encouraging more diversity at the potential choke point, technical measures that counteract its formation, or other means.</p>
+<p id="rfc.section.2.p.7">Going back to the example of CDNs and DDoS mitigation, the IETF is working to create protocols to help networks to communicate about DDoS attacks in the DOTS Working Group, and there is emerging work to help networks prevent their clients from contributing to DDoS attacks.</p>
+<p id="rfc.section.2.p.8">Outside the IETF, organisations like FIRST assure that responses are coordinated. These approaches aim to find a cooperative and voluntary solution to the problem without necessitating a new choke point.</p>
+<h1 id="rfc.section.3">
+<a href="#rfc.section.3">3.</a> <a href="#avoid-choke-points" id="avoid-choke-points">Avoid Choke Points</a>
+</h1>
+<p id="rfc.section.3.p.1">As John Gilmore said, &#8220;the internet interprets censorship as damage and routes around it.&#8221; Censorship is a form of control that relies on having an opportunity to exercise control. Limiting the number of choke points and assuring that any unavoidable points are appropriately administered allows this valuable architectural property to persist.</p>
+<p id="rfc.section.3.p.2">At the same time, the Internet&#8217;s composition as a network of independent networks is valuable; imposing external controls on them is to be avoided. However, this does not mean that internet infrastructure providers are without guidance; we note that the UN&#8217;s Guiding Principles on Business and Human Rights is an already-existing framework for businesses (including Internet infrastructure providers) to make such decisions within while still respecting human rights &#8211; including the right to Internet access.</p>
+<h1 id="rfc.authors"><a href="#rfc.authors">Authors' Addresses</a></h1>
+<div class="avoidbreak">
+  <address class="vcard">
+	<span class="vcardline">
+	  <span class="fn">Mark Nottingham</span> 
+	  <span class="n hidden">
+		<span class="family-name">Nottingham</span>
+	  </span>
+	</span>
+	<span class="org vcardline"></span>
+	<span class="adr">
+	  
+	  <span class="vcardline">
+		<span class="locality"></span> 
+		<span class="region"></span>
+		<span class="code"></span>
+	  </span>
+	  <span class="country-name vcardline"></span>
+	</span>
+	<span class="vcardline">EMail: <a href="mailto:mnot@mnot.net">mnot@mnot.net</a></span>
+
+<span class="vcardline">URI: <a href="https://www.mnot.net/">https://www.mnot.net/</a></span>
+
+  </address>
+</div><div class="avoidbreak">
+  <address class="vcard">
+	<span class="vcardline">
+	  <span class="fn">Brian Trammell</span> 
+	  <span class="n hidden">
+		<span class="family-name">Trammell</span>
+	  </span>
+	</span>
+	<span class="org vcardline"></span>
+	<span class="adr">
+	  
+	  <span class="vcardline">
+		<span class="locality"></span> 
+		<span class="region"></span>
+		<span class="code"></span>
+	  </span>
+	  <span class="country-name vcardline"></span>
+	</span>
+	<span class="vcardline">EMail: <a href="mailto:ietf@trammell.ch">ietf@trammell.ch</a></span>
+
+  </address>
+</div>
+
+</body>
+</html>
