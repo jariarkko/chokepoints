@@ -70,7 +70,7 @@ Table of Contents
    2.  Emerging Choke Points . . . . . . . . . . . . . . . . . . . .   3
    3.  Avoid Choke Points  . . . . . . . . . . . . . . . . . . . . .   4
      4.1.  URIs  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   4
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   5
 
 1.  Choke Points on the Internet
 
@@ -78,9 +78,9 @@ Table of Contents
    survive nuclear attack [1], so that loss of no one link or node would
    preclude communication.  This extends not only to the physical links
    that make up the Internet (seen, for example, in the duplication of
-   submarine internet links), but also to the various services that
+   submarine internet links [2]), but also to the various services that
    Internet access depends upon; for example, the operation of multiple
-   DNS root servers.
+   DNS root servers [3].
 
    Avoiding choke points is both a design goal for both the protocols
    and the services that make network access and operations possible, as
@@ -100,7 +100,7 @@ Table of Contents
 
    When an Internet choke point can't be avoided, we assure that it is
    administered by multiple parties with balanced interests, often
-   referred to as the Multi-Stakeholder Model.  In the case of the
+   referred to as the Multi-Stakeholder Model [4].  In the case of the
    Domain Name System, oversight is performed by ICANN.
 
    Similarly, the specifications that describe the Internet and the Web
@@ -115,7 +115,7 @@ Internet-Draft            Internet Choke Points            December 2017
 
 
    the World Wide Web consortium and the IETF, both of whom subscribe to
-   open standards principles.
+   open standards principles [5].
 
    Together, these architectural principles and corresponding practices
    assure that no one person, business or government can control the
@@ -126,8 +126,8 @@ Internet-Draft            Internet Choke Points            December 2017
    In some cases, external factors encourage the formation of a new
    choke point despite the efforts outlined above.  For example, near-
    monopolies on "last-mile" Internet access in some jurisdictions have
-   led to concerns about network neutrality, since they act as a choke
-   point.
+   led to concerns about network neutrality [6], since they act as a
+   choke point.
 
    Content Delivery Networks (CDNs) are sometimes viewed as another
    emerging choke point, because they are seen as essential in
@@ -194,7 +194,7 @@ Internet-Draft            Internet Choke Points            December 2017
    independent networks is valuable; imposing external controls on them
    is to be avoided.  However, this does not mean that internet
    infrastructure providers are without guidance; we note that the UN's
-   Guiding Principles on Business and Human Rights is an already-
+   Guiding Principles on Business and Human Rights [7] is an already-
    existing framework for businesses (including Internet infrastructure
    providers) to make such decisions within while still respecting human
    rights - including the right to Internet access.
@@ -204,6 +204,27 @@ Internet-Draft            Internet Choke Points            December 2017
 4.1.  URIs
 
    [1] https://www.rand.org/content/dam/rand/pubs/papers/2008/P1995.pdf
+
+   [2] http://submarine-cable-map-2016.telegeography.com/
+
+   [3] http://root-servers.org/
+
+   [4] https://en.wikipedia.org/wiki/Multistakeholder_governance_model
+
+   [5] https://open-stand.org/infographic-the-benefits-of-open-
+       standards/
+
+   [6] http://www.internetsociety.org/net-neutrality
+
+   [7] http://www.ohchr.org/Documents/Publications/
+       GuidingPrinciplesBusinessHR_EN.pdf
+
+
+
+Nottingham & Trammell     Expires June 11, 2018                 [Page 4]
+
+Internet-Draft            Internet Choke Points            December 2017
+
 
 Authors' Addresses
 
@@ -221,4 +242,39 @@ Authors' Addresses
 
 
 
-Nottingham & Trammell     Expires June 11, 2018                 [Page 4]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nottingham & Trammell     Expires June 11, 2018                 [Page 5]
