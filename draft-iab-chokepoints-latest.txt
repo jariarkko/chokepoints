@@ -13,16 +13,8 @@ Expires: June 11, 2018                                  December 8, 2017
 
 Abstract
 
-   Recent events have caused concern about control of access to the
-   Internet, leading one infrastructure company's CEO to reportedly
-   assert:
-
-      Literally, I woke up in a bad mood and decided someone shouldn't
-      be allowed on the Internet.  No one should have that power.
-
-   In fact, the Internet is both architected and administered to
-   preclude any one entity from having this power, through the careful
-   management of "choke points" where such power could be exercised.
+   This memo discusses points of control on the Internet, or "choke
+   points", that may have architectural impact.
 
 Status of This Memo
 
@@ -50,6 +42,14 @@ Copyright Notice
    Provisions Relating to IETF Documents
    (https://trustee.ietf.org/license-info) in effect on the date of
    publication of this document.  Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+   to this document.  Code Components extracted from this document must
+   include Simplified BSD License text as described in Section 4.e of
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
+
+
+
 
 
 
@@ -58,21 +58,29 @@ Nottingham & Trammell     Expires June 11, 2018                 [Page 1]
 Internet-Draft            Internet Choke Points            December 2017
 
 
-   carefully, as they describe your rights and restrictions with respect
-   to this document.  Code Components extracted from this document must
-   include Simplified BSD License text as described in Section 4.e of
-   the Trust Legal Provisions and are provided without warranty as
-   described in the Simplified BSD License.
-
 Table of Contents
 
-   1.  Choke Points on the Internet  . . . . . . . . . . . . . . . .   2
-   2.  Emerging Choke Points . . . . . . . . . . . . . . . . . . . .   3
-   3.  Avoid Choke Points  . . . . . . . . . . . . . . . . . . . . .   4
-     4.1.  URIs  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Choke Points on the Internet  . . . . . . . . . . . . . . . .   2
+   3.  Emerging Choke Points . . . . . . . . . . . . . . . . . . . .   3
+   4.  Avoid Choke Points  . . . . . . . . . . . . . . . . . . . . .   4
+     5.1.  URIs  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   5
 
-1.  Choke Points on the Internet
+1.  Introduction
+
+   Recent events have caused concern about control of access to the
+   Internet, leading one infrastructure company's CEO to reportedly
+   assert:
+
+      Literally, I woke up in a bad mood and decided someone shouldn't
+      be allowed on the Internet.  No one should have that power.
+
+   In fact, the Internet is both architected and administered to
+   preclude any one entity from having this power, through the careful
+   management of "choke points" where such power could be exercised.
+
+2.  Choke Points on the Internet
 
    A large influence on the architecture of the Internet was a need to
    survive nuclear attack [1], so that loss of no one link or node would
@@ -98,14 +106,6 @@ Table of Contents
    administration of the name space within the Domain Name System is a
    necessary choke point.
 
-   When an Internet choke point can't be avoided, we assure that it is
-   administered by multiple parties with balanced interests, often
-   referred to as the Multi-Stakeholder Model [4].  In the case of the
-   Domain Name System, oversight is performed by ICANN.
-
-   Similarly, the specifications that describe the Internet and the Web
-   form another potential choke point, since they mediate how most
-   people use the Internet.  For these, standardization is overseen by
 
 
 
@@ -114,6 +114,14 @@ Nottingham & Trammell     Expires June 11, 2018                 [Page 2]
 Internet-Draft            Internet Choke Points            December 2017
 
 
+   When an Internet choke point can't be avoided, we assure that it is
+   administered by multiple parties with balanced interests, often
+   referred to as the Multi-Stakeholder Model [4].  In the case of the
+   Domain Name System, oversight is performed by ICANN.
+
+   Similarly, the specifications that describe the Internet and the Web
+   form another potential choke point, since they mediate how most
+   people use the Internet.  For these, standardization is overseen by
    the World Wide Web consortium and the IETF, both of whom subscribe to
    open standards principles [5].
 
@@ -121,7 +129,7 @@ Internet-Draft            Internet Choke Points            December 2017
    assure that no one person, business or government can control the
    entire Internet.
 
-2.  Emerging Choke Points
+3.  Emerging Choke Points
 
    In some cases, external factors encourage the formation of a new
    choke point despite the efforts outlined above.  For example, near-
@@ -154,6 +162,14 @@ Internet-Draft            Internet Choke Points            December 2017
    Ensuring that choke points don't form is preferable to enshrining
    them, since they introduce not only points of control, but also
    increase the risk of failure in that component, concentrate the risk
+
+
+
+Nottingham & Trammell     Expires June 11, 2018                 [Page 3]
+
+Internet-Draft            Internet Choke Points            December 2017
+
+
    of security vulnerabilities there, and can ultimately limit the scale
    of the Internet.
 
@@ -162,13 +178,6 @@ Internet-Draft            Internet Choke Points            December 2017
    infrastructure providers.  This might take place through encouraging
    more diversity at the potential choke point, technical measures that
    counteract its formation, or other means.
-
-
-
-Nottingham & Trammell     Expires June 11, 2018                 [Page 3]
-
-Internet-Draft            Internet Choke Points            December 2017
-
 
    Going back to the example of CDNs and DDoS mitigation, the IETF is
    working to create protocols to help networks to communicate about
@@ -181,7 +190,7 @@ Internet-Draft            Internet Choke Points            December 2017
    voluntary solution to the problem without necessitating a new choke
    point.
 
-3.  Avoid Choke Points
+4.  Avoid Choke Points
 
    As John Gilmore said, "the internet interprets censorship as damage
    and routes around it."  Censorship is a form of control that relies
@@ -199,15 +208,23 @@ Internet-Draft            Internet Choke Points            December 2017
    providers) to make such decisions within while still respecting human
    rights - including the right to Internet access.
 
-4.  References
+5.  References
 
-4.1.  URIs
+5.1.  URIs
 
    [1] https://www.rand.org/content/dam/rand/pubs/papers/2008/P1995.pdf
 
    [2] http://submarine-cable-map-2016.telegeography.com/
 
    [3] http://root-servers.org/
+
+
+
+
+Nottingham & Trammell     Expires June 11, 2018                 [Page 4]
+
+Internet-Draft            Internet Choke Points            December 2017
+
 
    [4] https://en.wikipedia.org/wiki/Multistakeholder_governance_model
 
@@ -218,13 +235,6 @@ Internet-Draft            Internet Choke Points            December 2017
 
    [7] http://www.ohchr.org/Documents/Publications/
        GuidingPrinciplesBusinessHR_EN.pdf
-
-
-
-Nottingham & Trammell     Expires June 11, 2018                 [Page 4]
-
-Internet-Draft            Internet Choke Points            December 2017
-
 
 Authors' Addresses
 
@@ -237,16 +247,6 @@ Authors' Addresses
    Brian Trammell
 
    Email: ietf@trammell.ch
-
-
-
-
-
-
-
-
-
-
 
 
 
