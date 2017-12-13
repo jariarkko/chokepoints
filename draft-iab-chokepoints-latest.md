@@ -39,8 +39,11 @@ Recent events have caused concern about control of access to the Internet, leadi
 
 > Literally, I woke up in a bad mood and decided someone shouldn’t be allowed on the Internet. No one should have that power.
 
-In fact, the Internet is both architected and administered to preclude any one entity from having this power, through the careful management of “choke points” where such power could be exercised.
+The Internet is architected to reduce the possibilities for any one entity from having this power, through either avoiding “choke points” where such power could be exercised, or careful administration of the choke points that do exist.
 
+It is important to distinghuish between architectural choke points and choke points brought about through more general global consolidation trends. Some architectural choke points are inherent in the concept of a global, single Internet (e.g., the root of a shared name space) while others can come about as the Internet and its environment evolves (e.g., security issues lead to the use of small number of entities that are big enough to build effective defenses).
+
+Other choke points may exist regardless of technical reasons, e.g., consolidation and commercial developments. In general, some of these changes are a part of the Internet becoming globally commercial, the best solutions winning large market shares. But there are of course some concerns as well, starting from the effect few monocultures may have on security issues. Or to ensure openness, and the ability to ensure that innovation continues to generate new, better approaches in the Internet. These types of choke points may take many different forms, for instance in terms of traffic flows becoming more focused on large content providers; consolidation in the ISP industry; drive towards fewer but more popular operating systems or platforms; consolidation in the DNS or CDN industry; dominance of popular applications and types of accounts users have; limited sources for applications; and so on.
 
 # Choke Points on the Internet
 
@@ -73,6 +76,13 @@ Ensuring that choke points don’t form is preferable to enshrining them, since 
 
 Therefore, when there is risk of a choke point forming, we look for other mitigations before considering constraints on the behaviour of infrastructure providers. This might take place through encouraging more diversity at the potential choke point, technical measures that counteract its formation, or other means.
 
+# Consolidation
+
+Obviously, much of this space is outside the scope of the IETF, it is not our role to look at economics or policies governing economic development or competition.
+
+But there are some technical aspects of this as well. First, it may be worth studying to see if there are past assumptions about the architecture of the Internet that no longer hold true. Second, different technical architectures may have an influence on economics-driven developments. For instance, standardisation in general drives more competition as it eases transition costs between suppliers.
+
+There may also be research questions about the state of the Internet that the research community should pay more attention to. For instance, research on Internet traffic flows and how those change wrt their diversity and/or concentration over time.
 
 # Avoid Choke Points
 
