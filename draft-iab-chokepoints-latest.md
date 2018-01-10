@@ -24,11 +24,15 @@ author:
     name: Brian Trammell
     organization:
     email: ietf@trammell.ch
-
+ -
+    ins: J. Arkko
+    name: Jari Arkko
+    organization:
+    email: jari.arkko@piuha.net
 
 --- abstract
 
-This memo discusses points of control on the Internet, or "choke points", that may have architectural impact.
+This memo discusses points of control on the Internet, or "choke points", that may have architectural impact. The document also reviews trends related to consolidation in the Internet, and the role of architecture in enabling these trends.
 
 --- middle
 
@@ -80,5 +84,17 @@ As John Gilmore said, “the internet interprets censorship as damage and routes
 
 At the same time, the Internet’s composition as a network of independent networks is valuable; imposing external controls on them is to be avoided. However, this does not mean that internet infrastructure providers are without guidance; we note that the UN’s [Guiding Principles on Business and Human Rights](http://www.ohchr.org/Documents/Publications/GuidingPrinciplesBusinessHR_EN.pdf) is an already-existing framework for businesses (including Internet infrastructure providers) to make such decisions within while still respecting human rights -- including the right to Internet access.
 
+
+# Consolidation
+
+...
+
+# Architectural Issues Leading to Consolidation
+
+...
+
+# Addressing Consolidation with Technology
+
+...
 
 --- back
